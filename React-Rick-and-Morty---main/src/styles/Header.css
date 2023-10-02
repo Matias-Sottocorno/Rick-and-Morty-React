@@ -1,0 +1,191 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--body-color);
+  color: var(--title-color);
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 900px;
+  margin: auto;
+}
+
+.header__div {
+  text-align: center;
+  width: 100%;
+}
+
+.nav__button--menu {
+  background: none;
+  position: absolute;
+  bottom: 2vh;
+  left: 4vw;
+  color: var(--title-color);
+}
+
+.nav__div {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.5s;
+}
+
+.open-menu {
+  opacity: 1;
+  left: 0;
+}
+
+.close-menu {
+  opacity: 0;
+  left: -100%;
+}
+
+.nav__div__select {
+  width: 100%;
+  background-color: var(--body-color);
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border-radius: 10px;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.nav__div__div {
+  width: 100%;
+}
+
+.navForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navForm__input {
+  width: 85%;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background-color: var(--body-color);
+  color: aliceblue;
+}
+
+.navForm__button {
+  width: 15%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background-color: var(--text-color);
+  border-radius: 0 10px 10px 0;
+}
+
+.nav__div__div--section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+nav > div section h6 {
+  width: 85%;
+  padding: 10px;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-top: none;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .nav__button--menu {
+    left: 6vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    height: 20vh;
+    flex-direction: column;
+  }
+
+  .nav__button--menu {
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .close-menu {
+    opacity: 1;
+    left: 0;
+  }
+
+  .nav__div {
+    width: 100%;
+    height: 10vh;
+    position: static;
+    background: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav__div__select {
+    width: 250px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .navForm {
+    width: 250px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+  }
+
+  .nav__div__div {
+    width: auto;
+    position: relative;
+  }
+
+  .nav__div__div--section {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 40px;
+    width: 80%;
+    border-radius: 0 0 10px 10px;
+  }
+  nav > div section h6 {
+    width: 90%;
+    margin: 5px 10px;
+  }
+}
